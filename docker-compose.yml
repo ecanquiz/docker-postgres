@@ -11,3 +11,9 @@ services:
     volumes:
       - './${PGDATA}:/var/lib/postgresql/data'
     restart: always
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: true
